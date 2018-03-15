@@ -29,7 +29,8 @@ public class RecyclerViewActivity2 extends AppCompatActivity {
         //   Lookup the recyclerview in activity layout
         RecyclerView rvContacts = (RecyclerView) findViewById(R.id.recycler_view);
 
-        GsonBuilder buider = new GsonBuilder();
+
+                GsonBuilder buider = new GsonBuilder();
         Gson gson = buider.create();
         Type listType = new TypeToken<List<Profile>>(){}.getType();
         List<Profile> chapters = (List<Profile>) gson.fromJson(MyApp.msgMovie, listType);

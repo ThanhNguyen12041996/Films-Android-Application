@@ -73,11 +73,11 @@ public class Profile {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Profile{" +
-                "vote_count='" + vote_count + '\'' +
-           //     ", id='" + id + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Profile{" +
+//                "vote_count='" + vote_count + '\'' +
+//           //     ", id='" + id + '\'' +
+//                '}';
+//    }
 }

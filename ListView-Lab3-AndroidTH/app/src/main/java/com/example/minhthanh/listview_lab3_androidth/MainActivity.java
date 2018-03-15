@@ -1,6 +1,5 @@
 package com.example.minhthanh.listview_lab3_androidth;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,10 +33,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void StartActivity()
-    {
-        Intent i = new Intent(MainActivity.this, RecyclerViewActivity2.class);
-        startActivity(i);
-
-    }
 }
