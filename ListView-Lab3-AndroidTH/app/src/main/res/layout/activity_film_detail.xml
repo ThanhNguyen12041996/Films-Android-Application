@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.minhthanh.listview_lab3_androidth.FilmDetail">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="TextView"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="316dp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/youtube"
+        android:layout_alignStart="@+id/ratingbar"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="431dp"
+        android:layout_below="@+id/Title"
+        android:layout_alignStart="@+id/Title"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/Discription"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="237dp"
+        android:layout_below="@+id/ratingbar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/ratingbar"
+        android:layout_alignParentBottom="true" />
+
+    <RatingBar
+        android:id="@+id/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:layout_marginStart="32dp"
+        android:layout_below="@+id/Date"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/youtube"
+        android:layout_width="400dp"
+        android:layout_height="190dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@android:drawable/screen_background_light"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/iconplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/youtube"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+</RelativeLayout>
