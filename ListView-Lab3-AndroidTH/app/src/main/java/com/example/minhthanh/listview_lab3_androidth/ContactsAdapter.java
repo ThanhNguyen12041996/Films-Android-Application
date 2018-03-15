@@ -55,12 +55,21 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
         Profile contact = mContacts.get(position);
 
         // Set item views based on your views and data model
+        String textViewLength = "";
         TextView textView = viewHolder.nameTextView;
         TextView textViewTitle = viewHolder.titleTextView;
         ImageView PosterFilm = viewHolder.Poster;
 
         textViewTitle.setText(contact.getTitle());
-        textView.setText(contact.getOverview());
+        textViewLength = contact.getOverview();
+        if(textViewLength.length() >= 150) {
+            textView.setText(textViewLength.substring(0,150));
+            textView.append("[...]");
+        }
+        else {
+            textView.setText(textViewLength);
+        }
+
         Picasso.with(getContext()).load(path+contact.getPoster_path()).into(PosterFilm);
 
     }
