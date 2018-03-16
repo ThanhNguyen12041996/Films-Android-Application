@@ -55,10 +55,12 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
         Profile contact = mContacts.get(position);
 
         // Set item views based on your views and data model
-        String textViewLength = "";
+        String textViewLength;
+        String isVideo;
         TextView textView = viewHolder.nameTextView;
         TextView textViewTitle = viewHolder.titleTextView;
         ImageView PosterFilm = viewHolder.Poster;
+        ImageView PlayButton = viewHolder.PlayButton;
 
         textViewTitle.setText(contact.getTitle());
         textViewLength = contact.getOverview();
@@ -68,6 +70,14 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
         }
         else {
             textView.setText(textViewLength);
+        }
+
+        isVideo = contact.getvideo();
+        if(isVideo.equalsIgnoreCase("true")) {
+            PlayButton.setVisibility(View.VISIBLE);
+        }
+        if(isVideo.equalsIgnoreCase("false")) {
+            PlayButton.setVisibility(View.INVISIBLE);
         }
 
         Picasso.with(getContext()).load(path+contact.getPoster_path()).into(PosterFilm);
@@ -90,6 +100,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
         public TextView nameTextView;
         public TextView titleTextView;
         public ImageView Poster;
+        public ImageView PlayButton;
         Context ctx;
         List<Profile> profileList ;
 
@@ -104,8 +115,9 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
             this.profileList = profileList;
 
             nameTextView = (TextView) itemView.findViewById(R.id.contact_name);
-           titleTextView = (TextView) itemView.findViewById(R.id.textView);
+            titleTextView = (TextView) itemView.findViewById(R.id.textView);
             Poster = (ImageView) itemView.findViewById(R.id.imageView);
+            PlayButton = (ImageView) itemView.findViewById(R.id.imageView2);
 
         }
 
